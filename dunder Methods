@@ -1,0 +1,15 @@
+class man:
+    def __init__(self, name, age, height = 65):
+        self.name = name
+        self.age = age
+        self.height = height
+    def __add__(self, other):
+        return self.age + other.age, self.name +" " + other.name
+    def __len__(self):
+        return self.height
+
+person_1 = man('Tanvir', 21, 92)
+person_2 = man('Shiblu', 22)
+print(person_1 + person_2)
+print(person_1.age)
+print(len(person_1))
